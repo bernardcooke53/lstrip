@@ -1,9 +1,9 @@
-# lstrip
+# uncomment
 
 ## Installation
 
 ```bash
-cargo install --git https://github.com/bernardcooke53/lstrip.git@main lstrip
+cargo install --git https://github.com/bernardcooke53/uncomment.git@main uncomment
 ```
 
 ## Usage
@@ -12,17 +12,17 @@ cargo install --git https://github.com/bernardcooke53/lstrip.git@main lstrip
 # Copy your favourite programmer's commented commands out of
 # some file
 
-lstrip "$(cat<<EOF
+uncomment "$(cat<<EOF
 # ls .
 # echo "important message"
 EOF
 )" | bash
 ```
 
-You can also use `lstrip` with other comment styles, such a "//":
+You can also use `uncomment` with other comment styles, such a "//":
 
 ```bash
-cat <<EOF | lstrip "//" | exec
+cat <<EOF | uncomment "//" | exec
 // ls .
 // echo "important message"
 EOF
@@ -33,7 +33,7 @@ EOF
 Shell redirection currently doesn't seem to work, i.e. you can't do
 
 ```bash
-echo "// foo" | lstrip "//"
+echo "// foo" | uncomment "//"
 ```
 
 which I want to fix at some point, so things can properly be chained.

@@ -1,13 +1,13 @@
 use clap::Parser;
 
-const APPLICATION_NAME: &'static str = "lstrip";
+const APPLICATION_NAME: &'static str = "uncomment";
 const DEFAULT_LEADING_CHARS: &'static str = "#";
 
 #[derive(Parser, Debug)]
 #[command(author = "Bernard Cooke")]
 #[command(version)]
 #[command(about = r#"
-lstrip
+uncomment
 
 Strip leading characters from multiline text in the terminal."#)]
 #[command(

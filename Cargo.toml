@@ -1,5 +1,5 @@
 [package]
-name = "lstrip"
+name = "uncomment"
 authors = ["Bernard Cooke <bernard-cooke@hotmail.com>"]
 version = "0.1.0"
 edition = "2021"

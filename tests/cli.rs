@@ -2,7 +2,7 @@ use assert_cmd::Command;
 
 #[test]
 fn test_cli_output_1arg_no_ltrim_ws() {
-    Command::cargo_bin("lstrip")
+    Command::cargo_bin("uncomment")
         .unwrap()
         .args(["# abc\n  123\n"])
         .assert()
@@ -12,7 +12,7 @@ fn test_cli_output_1arg_no_ltrim_ws() {
 
 #[test]
 fn test_cli_output_1arg_no_ltrim_ws_extra_leading_ws() {
-    Command::cargo_bin("lstrip")
+    Command::cargo_bin("uncomment")
         .unwrap()
         .args(["    # abc\n  123"])
         .assert()
@@ -22,7 +22,7 @@ fn test_cli_output_1arg_no_ltrim_ws_extra_leading_ws() {
 
 #[test]
 fn test_cli_output_1arg_ltrim_ws() {
-    Command::cargo_bin("lstrip")
+    Command::cargo_bin("uncomment")
         .unwrap()
         .args(["# abc\n123\n", "-w"])
         .assert()
@@ -32,7 +32,7 @@ fn test_cli_output_1arg_ltrim_ws() {
 
 #[test]
 fn test_cli_output_1arg_ltrim_ws_extra_leading_ws() {
-    Command::cargo_bin("lstrip")
+    Command::cargo_bin("uncomment")
         .unwrap()
         .args(["    # abc\n  123", "-w"])
         .assert()
